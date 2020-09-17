@@ -71,7 +71,8 @@ function renderAvatar(user) {
     // 1.获取用户名
     var name = user.nickname || user.username;
     // 2.设置欢迎文本
-    // 3.渲染用户头像   若有头像user_pic显示头像，若没有就显示文本头像 text-avatar 
+    $('#welcome').html('欢迎&nbsp;&nbsp;' + name)
+        // 3.渲染用户头像   若有头像user_pic显示头像，若没有就显示文本头像 text-avatar 
     if (user.user_pic !== null) { //代表有图片头像 就显示出来并隐藏文本图像
         $('.layui-nav-img').attr('src', user.user_pic).show();
         $('.text-avatar').hide();
